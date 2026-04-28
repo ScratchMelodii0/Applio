@@ -55,6 +55,7 @@ from tabs.voice_blender.voice_blender import voice_blender_tab
 from tabs.plugins.plugins import plugins_tab
 from tabs.settings.settings import settings_tab
 from tabs.realtime.realtime import realtime_tab
+from tabs.singing.singing import project_editor_tab, text_to_singing_tab
 
 # Run prerequisites
 from core import run_prerequisites_script
@@ -137,6 +138,12 @@ with gr.Blocks(
 
     with gr.Tab(i18n("Realtime")):
         realtime_tab()
+
+    with gr.Tab(i18n("Project Editor")):
+        project_editor_tab()
+
+    with gr.Tab(i18n("Text-to-Singing")):
+        text_to_singing_tab()
 
     with gr.Tab(i18n("Plugins")):
         plugins_tab()
